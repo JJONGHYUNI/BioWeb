@@ -1,0 +1,44 @@
+.main{
+	width:60%;
+	min-width : 650px;
+	background: rgb(248, 249, 250);
+	margin:auto;
+	margin-top : 70px;
+	margin-bottom : 70px;
+}
+	
+#signUpForm {
+	width : 400px;
+	margin: auto;
+	padding: 10px;
+}
+	
+#signUpForm h1 {
+	text-align:center;
+}
+	
+
+.inputArea {
+	border: solid 1px #dadada;
+	padding : 10px 10px 10px 10px;
+	background : white;
+}
+
+.inputArea input:not([type=checkbox]) {
+		width : 250px;
+		height : 30px;
+		border: 0px;
+}
+.btnArea {
+	text-align:center;
+	padding : 50px;
+}
+	
+button {
+	width : 100px;
+	height : 35px;
+	border : 0px;
+	color: black;
+	background:#C8FFFF;
+	margin : 5px;
+}

@@ -1,0 +1,38 @@
+.main{
+	width:60%;
+	min-width : 650px;
+	background: rgb(248, 249, 250);
+	margin:auto;
+	margin-top : 100px;
+	margin-bottom : 100px;
+}
+#loginForm {
+	width : 300px;
+	margin: auto;
+	padding: 10px;
+}
+#loginForm h1 {
+	text-align:center;
+}
+.sub{
+	margin-top:3%;
+}
+.inputArea {
+	border: solid 1px #dadada;
+	padding : 10px 10px 10px 10px;
+	background : white;
+}
+
+.inputArea input:not([type=checkbox]) {
+		width : 250px;
+		height : 30px;
+		border: 0px;
+}
+#loginForm h1 {
+	text-align:center;
+}
+.inputArea {
+	border: solid 1px #dadada;
+	padding : 10px 10px 10px 10px;
+	background : white;
+}
