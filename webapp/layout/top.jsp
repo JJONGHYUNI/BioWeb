@@ -12,9 +12,10 @@
 		<img class="logo" src="<%= request.getContextPath() %>/layout/images/logo.jpg" alt=banner>
 	</div>
 	<tr>
-		<td colspan="2">
+		<td colspan="3">
 			<input class="but" id="join" type="button" value="회원가입" onclick="javascript:window.location='SignUp.jsp'">
-			<input id="login" type="button" value="로그인" onclick="javascript:window.location='SignUp.jsp'">
+			<input id="login" type="button" value="로그인" onclick="javascript:window.location='Login.jsp'">
+			<input id="login" type="button" value="로그아웃" onclick="javascript:window.location='Logout.jsp'">
 		</td>
 	</tr>
 </body>
