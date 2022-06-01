@@ -42,6 +42,8 @@
 		session.setAttribute("ID",member.getID());
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
+		script.println("alert('회원가입이 정상적으로 완료되었습니다.')");
+		script.println("location.href = 'Logout.jsp'");
 		script.println("location.href = 'Login.jsp'");
 		script.println("</script>");
 		}

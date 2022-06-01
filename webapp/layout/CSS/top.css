@@ -4,16 +4,6 @@
 	right:0px;
 	border:1px solid gray;
 }
-#join{
-	background-color: white;
-	text-align:right;
-	border:1px solid gray;
-}
-#login{
-	background-color:white;
-	border:1px solid gray;
-	margin-left:1%;
-}
 .logo{
 	width:50px;
 	float:left;

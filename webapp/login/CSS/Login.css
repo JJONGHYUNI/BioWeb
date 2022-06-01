@@ -31,8 +31,11 @@
 #loginForm h1 {
 	text-align:center;
 }
-.inputArea {
+#btn{
+	width : 250px;
+	height : 30px;
 	border: solid 1px #dadada;
-	padding : 10px 10px 10px 10px;
-	background : white;
+	padding :10px 10px 10px 10px;
+	background : black;
+	color:white;
 }

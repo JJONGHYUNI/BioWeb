@@ -1,19 +1,20 @@
 <%@ page contentType="text/html;charset=utf-8" %>
 <html>
 <head>
-	<title>회원 가입 폼</title>
+	<title>밤낮-회원가입</title>
+	<link rel="shortcut icon" type="image/x-icon" href="<%= request.getContextPath() %>/layout/images/logo.jpg">
 	<link href="<%= request.getContextPath() %>/login/CSS/SignUp.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <jsp:include page="../layout/top.jsp" flush="false" />
 <div class="main">
 		<div id="formarea">
-			<form id="signUpForm" action="<%= request.getContextPath() %>/login/SignUpProcess.jsp" method="post" onsubmit="return validate();">
+			<form id="signUpForm" name="fr" action="<%= request.getContextPath() %>/login/SignUpProcess.jsp" method="post" onsubmit="return validate();">
 				<h1>회원 가입</h1>
 				
 				<h4>아이디</h4>
 				<span class="inputArea"><input type="text" maxlength="13" name="userId" required></span>
-				<button id="idCheck" type="button">중복확인</button>
+				<button id="idCheck" type="button" onclick="IdCheck()">중복확인</button>
 				
 				<h4>비밀번호</h4>
 				<span class="inputArea"><input type="password" maxlength="15" name="userPw" required></span>
@@ -54,14 +55,15 @@
 	        }
 	    }).open();
 	}
-    </script>
-	<script>
-	    function validate(){
-			 return true;
+	function validate(){
+		return true;
 		}
-		function goLogin(){
-			location.href="Login.jsp";
+	function goLogin(){
+		location.href="Login.jsp";
 		}
+	function IdCheck(){
+		window.open("idCheckProcess.jsp?userid="+document.fr.userId.value,"idCheck","width=500, height=300");
+	}
 	</script>
 </body>
 </html>

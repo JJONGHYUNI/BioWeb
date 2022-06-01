@@ -1,29 +1,31 @@
 <%@ page contentType="text/html;charset=utf-8" %>
 <html>
 <head>
-	<title>로그인</title>
-	<link href="<%= request.getContextPath() %>/login/CSS/Login.css" type="text/css" rel="stylesheet">
+	<title>밤낮-로그인</title>
+	<link rel="shortcut icon" type="image/x-icon" href="<%= request.getContextPath() %>/layout/images/logo.jpg">
+	<link href="<%= request.getContextPath() %>/login/CSS/Login.css?after" type="text/css" rel="stylesheet">
 </head>
 
 <body>
 <jsp:include page="../layout/top.jsp" flush="false" />
 <div class="main">
 	<div id="formarea">
-		<form id="loginForm" action="<%= request.getContextPath() %>/loginProcess.jsp" method="post" onsubmit="return validate();">
+		<form id="loginForm" action="<%= request.getContextPath() %>/login/LoginProcess.jsp" method="post" onsubmit="return validate();">
 			<h1>로그인</h1>
 				
 			<h4>아이디</h4>
 			<span class="inputArea">
-				<input type="text" name="id" id="id" placeholder="아이디 입력">
+				<input type="text" name="userId" id="userId" placeholder="아이디 입력">
 			</span>
 				
 			<h4>비밀번호</h4>
 			<span class="inputArea">
-				<input type="text" name="pw" id="pw" placeholder="비밀번호 입력">
+				<input type="text" name="userPw" id="userPw" placeholder="비밀번호 입력">
 			</span>
-			
-			<span class="sub">
-				<input type="submit" value="로그인">
+			<h4>
+			</h4>
+			<span >
+				<input id = btn type="submit" value="로그인">
 			</span>
 		</form>
 	</div>

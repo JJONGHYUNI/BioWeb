@@ -10,7 +10,6 @@ public class Member implements Serializable {
 	private String detailAddress;
 	private String email;
 	
-	
 	public String getID() {
 		return ID;
 	}

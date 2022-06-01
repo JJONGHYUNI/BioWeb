@@ -21,6 +21,45 @@ public class UserDAO{
 			e.printStackTrace();
 		}
 	}
+	public int login(String ID, String PW) {
+		String SQL = "SELECT pw FROM member WHERE id = ?";
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, ID);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				if(rs.getString(1).contentEquals(PW)) {
+					return 1;
+				}
+				else
+					return 0;
+			}
+			return -1;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -2;
+	}
+	public int IdCheck(String ID){
+		int result = -1;
+		try {
+			String SQL = "SELECT pw FROM member WHERE id = ?";
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, ID);
+			rs = pstmt.executeQuery();
+
+			if(rs.next()){	
+				result = 0;
+			}else{
+				result = 1;
+			}
+			System.out.println("아이디 중복체크결과 : "+result);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
 	public int signUP(Member member) {
 		String SQL = "INSERT INTO member VALUES( ?, ?, ?, ?, ?, ?, ?)";
 		try {
